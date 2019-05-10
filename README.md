@@ -4,6 +4,10 @@ This repository intended to maintain an *up-to-date* Macintosh File System(MFS) 
 
 **TODO**: you may describe the implementation in details.
 
+### Caveats
+
+* This repository purely for learning purpose, thusly I may wrote comments heavily, in such case, to distinguish from the original author([Quinn "The Eskimo!"](http://anarchistturtle.com/quinn/www)), I uses `/** This is a comment */` comment style solely.
+
 ## *References*
 
 [MFSLives Sample Code](https://developer.apple.com/library/archive/samplecode/MFSLives/Introduction/Intro.html)
