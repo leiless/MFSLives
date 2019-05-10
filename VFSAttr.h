@@ -6,6 +6,8 @@
  *
  */
 
+#ifndef MFS_VFSATTR_H
+#define MFS_VFSATTR_H
 
 /*
  * Kernel level support for the VFS_GETATTR(), VFS_SETATTR() for use in
@@ -100,4 +102,6 @@ struct vfs_attr {
     uint64_t    f_quota;    /* total quota data blocks in file system */
     uint64_t    f_reserved;    /* total reserved data blocks in file system */
 };
+
+#endif      /* MFS_VFSATTR_H */
 
