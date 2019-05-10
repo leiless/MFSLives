@@ -80,9 +80,13 @@ First checked in.
 // dictionary in the debug build.
 
 #if MACH_ASSERT
+    #ifndef LCK_MTX_ASSERT                  /** LCK_MTX_ASSERT may already define */
     #define LCK_MTX_ASSERT lck_mtx_assert
+    #endif
 #else
+    #ifndef LCK_MTX_ASSERT                  /** ditto. */
     #define LCK_MTX_ASSERT(gHashMutex, LCK_MTX_ASSERT_OWNED) do { } while (0)
+    #endif
 #endif
 
 /////////////////////////////////////////////////////////////////////

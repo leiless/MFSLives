@@ -2198,7 +2198,8 @@ static errno_t VNOPReadDir(struct vnop_readdir_args *ap)
                 assert(trustDirOffset);
                 
                 if (dirOffset == 0) {
-                    strcpy(dirEntBuf->d_name, ".");
+                    //strcpy(dirEntBuf->d_name, ".");
+                    strncpy(dirEntBuf->d_name, ".", 2);     /** strcpy() is deprecated */
                     err = CopyOutDirEnt(uio, kMFSRootInodeNumber, DT_DIR, dirEntBuf);
                     if (err == 0) {
                         dirOffset = 1;
@@ -2206,7 +2207,8 @@ static errno_t VNOPReadDir(struct vnop_readdir_args *ap)
                     }
                 }
                 if ( (err == 0) && (dirOffset == 1) ) {
-                    strcpy(dirEntBuf->d_name, ".");
+                    //strcpy(dirEntBuf->d_name, ".");
+                    strncpy(dirEntBuf->d_name, ".", 2);     /** ditto.  */
                     err = CopyOutDirEnt(uio, kMFSRootInodeNumber, DT_DIR, dirEntBuf);
                     if (err == 0) {
                         dirBlock = fsmp->fDirectoryStartBlock;
@@ -3858,7 +3860,12 @@ static struct vfsops gVFSOps = {
     NULL,                                       // vfs_init     -- optional
     NULL,                                       // vfs_sysctl   -- MFSLives has no custom sysctls
     NULL,                                       // vfs_setattr  -- not needed for read-only file systems
-    {NULL, NULL, NULL, NULL, NULL, NULL, NULL}  // vfs_reserved
+
+    //{NULL, NULL, NULL, NULL, NULL, NULL, NULL}  // vfs_reserved
+
+    NULL,                           /** vfs_ioctl */
+    NULL,                           /** vfs_vget_snapdir */
+    NULL, NULL, NULL, NULL, NULL    /** vfs_reserved5 .. vfs_reserved1 */
 };
 
 // gVFSEntry describes the overall VFS plug-in.  It's passed as a parameter 
