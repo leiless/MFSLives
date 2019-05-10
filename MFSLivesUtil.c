@@ -73,6 +73,8 @@ First checked in.
 #include <sys/mman.h>
 #include <sys/xattr.h>
 
+#include <libkern/OSByteOrder.h>        /** OSReadBigInt32() */
+
 // MFS core code
 
 #include "MFSCore.h"

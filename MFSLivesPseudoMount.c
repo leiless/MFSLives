@@ -68,6 +68,8 @@ First checked in.
 #include <sys/param.h>
 #include <sys/xattr.h>
 
+#include <libkern/OSByteOrder.h>    /** OSReadBigInt32() OSSwapBigToHostInt32() */
+
 #include "MFSCore.h"
 
 /////////////////////////////////////////////////////////////////////

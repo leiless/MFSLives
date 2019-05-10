@@ -121,8 +121,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0A7F5CA32285CE8500FADC8B /* VFSAttr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VFSAttr.h; sourceTree = "<group>"; };
 		1A224C3CFF42312311CA2CB7 /* MFSLives.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MFSLives.c; sourceTree = "<group>"; };
-		32A4FEC30562C75700D090E7 /* KEXTInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = KEXTInfo.plist; sourceTree = "<group>"; };
+		32A4FEC30562C75700D090E7 /* KEXTInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = KEXTInfo.plist; sourceTree = "<group>"; };
 		32A4FEC40562C75800D090E7 /* MFSLives.kext */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MFSLives.kext; sourceTree = BUILT_PRODUCTS_DIR; };
 		D27513B306A6225300ADB3A4 /* Kernel.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kernel.framework; path = /System/Library/Frameworks/Kernel.framework; sourceTree = "<absolute>"; };
 		E412883B0A616A420030D797 /* TableGenerator.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = TableGenerator.c; sourceTree = "<group>"; };
@@ -139,7 +140,7 @@
 		E44A745D0A5AB50B004DBCCD /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = /System/Library/Frameworks/CoreServices.framework; sourceTree = "<absolute>"; };
 		E44A76340A5AB95E004DBCCD /* MFSCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFSCore.h; sourceTree = "<group>"; };
 		E44A76350A5AB95E004DBCCD /* MFSCore.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MFSCore.c; sourceTree = "<group>"; };
-		E45E444208A8E2C50059CA8C /* mount_MFSLives */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "compiled.mach-o.executable"; path = mount_MFSLives; sourceTree = BUILT_PRODUCTS_DIR; };
+		E45E444208A8E2C50059CA8C /* mount_MFSLives */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = mount_MFSLives; sourceTree = BUILT_PRODUCTS_DIR; };
 		E45E447808A8E4DA0059CA8C /* MountMFSLives.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = MountMFSLives.c; sourceTree = "<group>"; };
 		E46AC636087C2367007C29A0 /* MFSLivesMountArgs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFSLivesMountArgs.h; sourceTree = "<group>"; };
 		E49F257E0AE533CB00ACEFFC /* English */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -149,7 +150,7 @@
 		E4D841140A73AA9C00BEA822 /* MFSLivesPseudoMount.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MFSLivesPseudoMount.c; sourceTree = "<group>"; };
 		E4E9FDE60A66E44300FEDE4A /* VNodeAttr.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = VNodeAttr.h; sourceTree = "<group>"; };
 		E4F3564B0A659DAE003476CC /* MFSLives.fs */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MFSLives.fs; sourceTree = BUILT_PRODUCTS_DIR; };
-		E4F3565F0A659E3A003476CC /* FSBundle.plist */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; path = FSBundle.plist; sourceTree = "<group>"; };
+		E4F3565F0A659E3A003476CC /* FSBundle.plist */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.xml; path = FSBundle.plist; sourceTree = "<group>"; };
 		E4F356920A65A293003476CC /* MFSLives.util */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MFSLives.util; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4F356A40A65A3CB003476CC /* MFSLivesUtil.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = MFSLivesUtil.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -253,6 +254,7 @@
 				E425DC730A6BA8CF0078E054 /* utf8_decodestr.h */,
 				E425DC740A6BA8CF0078E054 /* utf8_decodestr.c */,
 				E412883B0A616A420030D797 /* TableGenerator.c */,
+				0A7F5CA32285CE8500FADC8B /* VFSAttr.h */,
 			);
 			name = Tools;
 			sourceTree = "<group>";
@@ -382,7 +384,11 @@
 /* Begin PBXProject section */
 		089C1669FE841209C02AAC07 /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+			};
 			buildConfigurationList = E46AC497087558F9007C29A0 /* Build configuration list for PBXProject "MFSLives" */;
+			compatibilityVersion = "Xcode 2.4";
+			developmentRegion = en;
 			hasScannedForEncodings = 1;
 			knownRegions = (
 				English,
@@ -393,6 +399,7 @@
 			);
 			mainGroup = 089C166AFE841209C02AAC07 /* EmptyFS */;
 			projectDirPath = "";
+			projectRoot = "";
 			targets = (
 				E45E449C08A8E7290059CA8C /* All */,
 				E4F356410A659DAE003476CC /* FSBundle */,

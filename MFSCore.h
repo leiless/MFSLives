@@ -63,6 +63,7 @@ First checked in.
 #include <sys/vnode.h>
 #if ! KERNEL
     #include "VNodeAttr.h"
+    #include "VFSAttr.h"        /** Kernel header exposure in user space */
 #endif
 
 /////////////////////////////////////////////////////////////////////
