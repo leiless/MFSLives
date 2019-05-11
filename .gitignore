@@ -11,4 +11,5 @@ DerivedData/
 build/
 
 project.xcworkspace/
+xcuserdata/
 
